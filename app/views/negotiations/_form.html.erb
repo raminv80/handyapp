@@ -1,0 +1,37 @@
+<%= form_for(@negotiation) do |f| %>
+  <% if @negotiation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@negotiation.errors.count, "error") %> prohibited this negotiation from being saved:</h2>
+
+      <ul>
+      <% @negotiation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :quata %><br>
+    <%= f.text_field :quata %>
+  </div>
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_area :message %>
+  </div>
+  <div class="field">
+    <%= f.label :from %><br>
+    <%= f.text_field :from %>
+  </div>
+  <div class="field">
+    <%= f.label :to %><br>
+    <%= f.text_field :to %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

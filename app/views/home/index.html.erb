@@ -1,0 +1,9 @@
+<h1>Home#index</h1>
+<div>
+	Looking for a service?
+	<% @services.each do |service| %>
+	<a class="service-icon service-<%=service.name%>" href="/service/<%=service.slug%>">
+		<%=service.name%>
+	</a>
+	<% end %>
+</div>

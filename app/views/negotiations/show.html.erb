@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Quata:</strong>
+  <%= @negotiation.quata %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @negotiation.message %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @negotiation.from %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @negotiation.to %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @negotiation.state %>
+</p>
+
+<%= link_to 'Edit', edit_negotiation_path(@negotiation) %> |
+<%= link_to 'Back', negotiations_path %>

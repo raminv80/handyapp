@@ -1,0 +1,52 @@
+ServiceRequest
+	user_id
+	geo_lat
+	geo_lng
+	address
+	desc
+	title
+	service_type_id
+	state
+Media
+	name
+	type
+	size
+	request_id
+	user_id
+ServiceType
+	name
+UserProfile
+	name
+	email
+	mobile
+	address
+	pass
+Service
+	user_ids
+	name
+	logo
+	description
+	rank
+	contact_address
+	contact_email
+	contact_phone
+	service_type_id
+Quata
+	request_id
+	user_id
+	amount
+	duration
+	when
+	state
+Negotitation
+	quata_id
+	message
+	from_user_id
+	to_user_id
+	state
+Review
+	rank
+	user_id
+	service_id
+	service_reque
+	message

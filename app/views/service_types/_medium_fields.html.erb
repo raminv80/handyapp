@@ -1,0 +1,8 @@
+<p>
+<%= image_tag(@user.name_url) if f.object.name? %>
+<%= f.file_field :name, accept: 'image/png,image/gif,image/jpeg' %>
+<% f.hidden_field :name_cache %>
+<%# f.check_box :_destroy %>
+<%# f.label :_destroy, "delete" %>
+<%= link_to_remove_fields raw(fa_icon "times"), f %>
+</p>

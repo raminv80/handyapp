@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Service request:</strong>
+  <%= @quatum.service_request %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @quatum.user %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @quatum.amount %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @quatum.duration %>
+</p>
+
+<p>
+  <strong>When:</strong>
+  <%= @quatum.when %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @quatum.state %>
+</p>
+
+<%= link_to 'Edit', edit_quatum_path(@quatum) %> |
+<%= link_to 'Back', quata_path %>

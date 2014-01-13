@@ -1,0 +1,2 @@
+module QuataHelper
+end

@@ -1,0 +1,25 @@
+<%= form_for @service_request, :html => { :class => 'form-horizontal', multipart:true } do |f| %>
+  <div class="control-group">
+    <%= f.label :title, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :title, :class => 'text_field', value:"Request for #{@service_type.name} service" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label "Describe what do you need", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :desc, :cols=> 40, :rows=> 5, :class => 'text_field' %>
+    </div>
+  </div>
+  <%= f.hidden_field :geolat, value:@lat_lng[0] %>
+  <%= f.hidden_field :geolng, value:@lat_lng[1] %>
+  <%= f.fields_for :media do |builder| %>
+    <%= render 'medium_fields', :f => builder %>
+  <%end%>
+  <p><%= link_to_add_fields raw(fa_icon "plus")+" Add anther image", f, :media, {class:'btn'} %></p>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                service_requests_path, :class => 'btn' %>
+  </div>
+<% end %>

@@ -1,0 +1,37 @@
+<h1>Listing quata</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Service request</th>
+      <th>User</th>
+      <th>Amount</th>
+      <th>Duration</th>
+      <th>When</th>
+      <th>State</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quata.each do |quatum| %>
+      <tr>
+        <td><%= quatum.service_request %></td>
+        <td><%= quatum.user %></td>
+        <td><%= quatum.amount %></td>
+        <td><%= quatum.duration %></td>
+        <td><%= quatum.when %></td>
+        <td><%= quatum.state %></td>
+        <td><%= link_to 'Show', quatum %></td>
+        <td><%= link_to 'Edit', edit_quatum_path(quatum) %></td>
+        <td><%= link_to 'Destroy', quatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quatum', new_quatum_path %>
